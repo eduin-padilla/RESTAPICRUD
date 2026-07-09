@@ -1,15 +1,12 @@
 import { Router } from 'express'
-import {createProduct} from './handlers/product'
+import {createProduct, getProducts} from './handlers/product'
 import { body } from 'express-validator'
 import { handleInputErrors } from './middleware'
 
 const router: Router = Router()
 
 
-
-router.get('/', (req,res ) => {
-    res.json('desde get')
-})
+router.get('/', getProducts)
 
 router.post('/', 
 
@@ -22,10 +19,6 @@ router.post('/',
 
 
 
-
-router.put('/', (req,res ) => {
-    res.json('desde put')
-})
 router.patch('/', (req,res ) => {
     res.json('desde patch')
 })
