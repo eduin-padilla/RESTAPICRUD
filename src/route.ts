@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import {createProduct, getProducts, getProductsById} from './handlers/product'
+import {createProduct, getProducts, getProductsById, updateProduct} from './handlers/product'
 import { body, param } from 'express-validator'
 import { handleInputErrors } from './middleware'
 
@@ -22,6 +22,8 @@ router.post('/',
 )
 
 
+
+router.put('/:id', updateProduct)
 
 
 export default router
