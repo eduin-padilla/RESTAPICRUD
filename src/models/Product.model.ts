@@ -17,7 +17,7 @@ class Product extends Model {
     @Column({
         type: DataType.FLOAT
     })
-     declareprice: number
+     declare price: number
     
     @Default(true)
     @Column({
